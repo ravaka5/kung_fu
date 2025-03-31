@@ -1,5 +1,5 @@
 import React from 'react'
-import rest1 from '../../assets/img/restaurant/Rectangle 18.jpeg'
+import rest1 from '../../assets/img/restaurant/Rectangle19.png'
 
 const Page2 = () => {
   return (
