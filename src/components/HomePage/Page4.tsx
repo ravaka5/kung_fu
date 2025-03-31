@@ -1,4 +1,3 @@
-import React from 'react'
 import Card from '../Card'
 import page1_2 from '../../assets/img/homepage/Rectangle 50.png'
 

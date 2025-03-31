@@ -1,4 +1,3 @@
-import React from 'react'
 import page1_3 from '../../assets/img/homepage/Rectangle8.jpeg'
 
 const Page3 = () => {

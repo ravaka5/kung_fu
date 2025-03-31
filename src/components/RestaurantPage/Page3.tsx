@@ -1,7 +1,6 @@
-import React from 'react'
 import rest1 from '../../assets/img/restaurant/Rectangle19.png'
 
-const Page2 = () => {
+const Page3 = () => {
   return (
     <div className='w-screen h-screen flex justify-center items-center' >
         <div className='h-100 w-screen bg-center bg-cover bg-fixed flex justify-center items-center' style={{ backgroundImage: `url(${rest1})` }}>
@@ -15,4 +14,4 @@ const Page2 = () => {
   )
 }
 
-export default Page2
+export default Page3

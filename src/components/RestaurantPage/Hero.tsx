@@ -1,4 +1,3 @@
-import React from 'react'
 import restBg from '../../assets/img/Restaurantbg.jpeg'
 
 const Hero = () => {

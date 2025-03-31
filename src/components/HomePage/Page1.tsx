@@ -1,4 +1,3 @@
-import React from 'react'
 import page1 from '../../assets/img/homepage/page1.png'
 import page1_2 from '../../assets/img/homepage/Rectangle 50.png'
 

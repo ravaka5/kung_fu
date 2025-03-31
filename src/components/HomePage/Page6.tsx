@@ -1,4 +1,3 @@
-import React from 'react'
 import HorizontalScroll from '../slider/HorizontalScroll'
 
 const Page6 = () => {

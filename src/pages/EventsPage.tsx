@@ -1,4 +1,3 @@
-import React from 'react'
 import Eventsbg from '../assets/img/Eventsbg.jpeg'
 
 const EventsPage = () => {

@@ -1,4 +1,3 @@
-import React from 'react'
 import footer from '../assets/img/homepage/Rectangle 14.jpg'
 
 const Footer = () => {

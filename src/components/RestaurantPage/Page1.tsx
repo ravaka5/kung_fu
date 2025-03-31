@@ -1,4 +1,3 @@
-import React from 'react';
 
 import bouffe1 from '../../assets/img/restaurant/bouffe/bouffe1.jpeg';
 import bouffe2 from '../../assets/img/restaurant/bouffe/bouffe2.jpeg';

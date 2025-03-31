@@ -1,4 +1,3 @@
-import React from 'react'
 import RoomBg from '../assets/img/Roombg.jpeg'
 
 const RoomPage = () => {
