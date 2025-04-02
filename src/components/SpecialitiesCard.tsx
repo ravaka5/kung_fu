@@ -1,3 +1,5 @@
+import React from 'react'
+
 interface SpecialitiesCardProps
 {
     title: string,
