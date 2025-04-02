@@ -48,7 +48,7 @@ const Footer = () => {
             </div>
         </div>
         </div>
-        <hr className='mx-[4vw] my-[2vw] border-2 border-gray-100'/>
+        <hr className='mx-[8vw] my-[2vw] border-2 border-gray-200'/>
         <div className='mx-[10vw] mb-[2vw]'>
             <h1 className='text-xl font-noto-serif'>Kung Fu Hotel .</h1>
             <p className='font-poppins text-gray-600'>A votre service depuis 2021</p>

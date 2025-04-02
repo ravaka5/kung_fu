@@ -5,10 +5,10 @@ const Page5 = () => {
     <section className='w-screen h-screen flex justify-center items-center text-center'>
         <div>
         <div className='text-red-700 font-poppins'>
-            <h1 className='text-[56px]'>
+            <h1 className='text-[4vw]'>
                 Delices culinaires
             </h1>
-            <p className='text-[22px] font-light'>
+            <p className='text-[1.3vw] font-light'>
             Savourez le meilleur de la cuisine malgache et chinoise, où chaque bouchée <br/>
             est un véritable voyage gustatif ! Vos papilles vous remercieront !
             </p>

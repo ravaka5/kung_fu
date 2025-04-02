@@ -41,7 +41,7 @@ const Slider = () => {
 
     const [currentIndex, setCurrentIndex] = useState(0)
   return (
-    <div className='max-w-[1400px] h-[30vw] w-[70vw] m-auto py-16 px-4 relative group'>
+    <div className='max-w-[70vw] h-[30vw] w-[70vw] m-auto py-[5vw] px-[2vw] relative group'>
         <div className='flex w-full h-full px-[4vw]'>
             <div className="w-[40vw] flex items-center">
                 <h1 className='text-left text-[32px]'>
