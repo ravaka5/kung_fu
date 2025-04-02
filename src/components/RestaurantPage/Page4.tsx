@@ -1,4 +1,3 @@
-import React from 'react'
 import SpecialitiesCard from '../SpecialitiesCard'
 import bouffe from "../../assets/img/restaurant/bouffe/bouffe5.jpeg"
 
