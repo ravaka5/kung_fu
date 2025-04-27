@@ -1,3 +1,4 @@
+import { MdOutlineKeyboardArrowDown } from 'react-icons/md'
 import page1_3 from '../../assets/img/homepage/Rectangle8.jpeg'
 
 const Page3 = () => {
@@ -16,7 +17,13 @@ const Page3 = () => {
             et des experiences inoubliables !
             </p>
           </div>
+          <div className="">
+                          <button className="bg-gray-100 text-black rounded-full animate-bounce mt-[2vw]">
+                              <MdOutlineKeyboardArrowDown className=" w-[3vw] h-[3vw]" />
+                          </button>
           </div>
+          </div>
+          
         </div>
         
       </div>

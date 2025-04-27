@@ -11,10 +11,10 @@ interface SpecialitiesCardProps
 const SpecialitiesCard:React.FC<SpecialitiesCardProps> = ({imgUrl,title,content,price}) => {
   return (
     <div>
-      <div className='rounded-3xl w-[20vw] h-[30vw] shadow-md flex flex-col'>
+      <div className='rounded-3xl w-[20vw] shadow-md flex flex-col'>
         <div className='h-full w-[fit]'>
-            <img style={{backgroundImage:`url(${imgUrl})`}}/>
-            <div className="bg-gray-200 w-fit px-[1vw] rounded-[5px] asolute ms-[2vw] mt-[1vw]">
+            <img src={imgUrl} className='w-full h-[20vw] rounded-t-4xl object-cover'/>
+            <div className="bg-gray-200 w-fit px-[1vw] rounded-[5px]  ms-[2vw] mt-[1vw]">
                 <p>{price}</p>
             </div>
         </div>

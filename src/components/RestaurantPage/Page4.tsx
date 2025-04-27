@@ -1,5 +1,6 @@
 import SpecialitiesCard from '../SpecialitiesCard'
 import bouffe from "../../assets/img/restaurant/bouffe/bouffe5.jpeg"
+import bouffe1 from "../../assets/img/restaurant/bouffe/bouffe6.jpeg"
 
 const Page4 = () => {
   return (
@@ -14,8 +15,8 @@ const Page4 = () => {
           <SpecialitiesCard
             title='Le Hen’omby ritra'
             content='Un ragoût de bœuf malgache aux épices locales, mijoté à la perfection pour des saveurs authentiques.'
-            price='50 000 MGA'
-            imgUrl={bouffe}
+            price='80 000 MGA'
+            imgUrl={bouffe1}
           />
         </div>
         

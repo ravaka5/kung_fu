@@ -13,10 +13,10 @@ const HomePage = () => {
     <div className='scroll-smooth'>
       <Hero/>
       <Page1/>
-      <Page2/>
       <Page3/>
       <Page4/>
       <Page5/>
+      <Page2/>
       <Page6/>
       <Page7/>
     </div>

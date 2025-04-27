@@ -7,8 +7,9 @@ import bouffe5 from '../../assets/img/restaurant/bouffe/bouffe5.jpeg';
 
 const Page1 = () => {
   return (
-    <section className='w-screen h-screen flex-row py-[2vw]'>
-      <div className='font-noto-poppins text-red-800 flex justify-between border-b-2 w-full h-fit mx-[6vw]'>
+    <section className='w-screen h-screen py-[2vw] items-center justify-center flex'>
+      <div className='flex-row '>
+      <div className='font-noto-poppins text-red-800 flex-row justify-between border-b-2 w-full h-fit mx-[6vw]'>
         <div>
           <h1 className='text-[4vw]'>DE LA HAUTE GASTRONOMIE</h1>
           <p className='text-[1.5vw]'>
@@ -23,6 +24,7 @@ const Page1 = () => {
         <img src={bouffe3} alt='Dish 3' className='h-[28vw] w-[15vw] object-cover' />
         <img src={bouffe4} alt='Dish 4' className='h-[28vw] w-[15vw] object-cover mt-[16vw]' />
         <img src={bouffe5} alt='Dish 5' className='h-[28vw] w-[15vw] object-cover' />
+      </div>
       </div>
     </section>
   );

@@ -1,6 +1,7 @@
 import Card from '../Card'
-import page1_2 from '../../assets/img/homepage/Rectangle 50.png'
-
+import img1 from "../../assets/img/homepage/Rectangle 9.png"
+import img2 from "../../assets/img/homepage/Rectangle 9 (1).png"
+import img3 from "../../assets/img/homepage/Rectangle 9 (2).png"
 const Page4 = () => {
   return (
     <section className='w-screen h-screen flex-row justify-center items-center'>
@@ -17,19 +18,19 @@ const Page4 = () => {
         title='mariage'
         subtitle='Célébrations de rêve !'
         content='Épousez-vous avec style et élégance !'
-        imgUrl={page1_2}
+        imgUrl={img1}
         />
         <Card
         title='Evenements'
         subtitle='Espace seminaire'
         content="Parfait pour des rassemblements d'entreprise et des ateliers !"
-        imgUrl={page1_2}
+        imgUrl={img2}
         />
         <Card
         title='Loisirs'
         subtitle='Activités amusantes'
         content='Le basket, la piscine et les jeux vous attendent !'
-        imgUrl={page1_2}
+        imgUrl={img3}
         />
         </div>
     
