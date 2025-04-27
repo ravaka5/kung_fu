@@ -14,24 +14,24 @@ const Page4 = () => {
         </p>
         </div>
         <div className='flex justify-around px-40'>
-        <Card
-        title='mariage'
-        subtitle='Célébrations de rêve !'
-        content='Épousez-vous avec style et élégance !'
-        imgUrl={img1}
-        />
-        <Card
-        title='Evenements'
-        subtitle='Espace seminaire'
-        content="Parfait pour des rassemblements d'entreprise et des ateliers !"
-        imgUrl={img2}
-        />
-        <Card
-        title='Loisirs'
-        subtitle='Activités amusantes'
-        content='Le basket, la piscine et les jeux vous attendent !'
-        imgUrl={img3}
-        />
+          <Card
+          title='mariage'
+          subtitle='Célébrations de rêve !'
+          content='Épousez-vous avec style et élégance !'
+          imgUrl={img1}
+          />
+          <Card
+          title='Evenements'
+          subtitle='Espace seminaire'
+          content="Parfait pour des rassemblements d'entreprise et des ateliers !"
+          imgUrl={img2}
+          />
+          <Card
+          title='Loisirs'
+          subtitle='Activités amusantes'
+          content='Le basket, la piscine et les jeux vous attendent !'
+          imgUrl={img3}
+          />
         </div>
     
   </section>

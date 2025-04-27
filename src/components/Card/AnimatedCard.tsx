@@ -1,38 +1,49 @@
-import React from "react";
-interface AnimatedCardProps
-{
-    header: string;
-    description: string;
-    price: string;
-    imgUrl: string
-}
-const AnimatedCard:React.FC<AnimatedCardProps> = ({header,description,price,imgUrl}) => {
-  return (
-    <div className="flex items-center justify-center font-poppins">
-        <div className="group relative items-center justify-center rounded-4xl overflow-hidden hover:shadow-xl hover:shadow-black/30 transition-shadow cursor-pointer">
-      <div className="h-[28vw] w-[28vw]">
-        <img className="h-full w-full object-cover group-hover:scale-105 transition-transform duration-800" src={imgUrl}/>
-      </div>
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black group-hover:from-black/70 group-hover:via-black/60 group-hover:to-black/70">
+import { useState } from 'react';
 
+interface AnimatedCardProps {
+  header: string;
+  price: string;
+  description: string;
+  imgUrl: string;
+}
+
+const AnimatedCard = ({ header, price, description, imgUrl }: AnimatedCardProps) => {
+  const [isHovered, setIsHovered] = useState(false);
+
+  return (
+    <div
+      className="relative overflow-hidden group rounded-xl w-[280px] h-[400px] lg:w-[22vw] lg:h-[28vw] shadow-lg transition-all duration-500 cursor-pointer"
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+    >
+      {/* Image with zoom effect */}
+      <div className="absolute inset-0 w-full h-full">
+        <img
+          src={imgUrl}
+          alt={header}
+          className={`w-full h-full object-cover transition-transform duration-700 ${isHovered ? 'scale-110' : 'scale-100'}`}
+        />
+
+        {/* Overlay gradient */}
+        <div className={`absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent transition-opacity duration-500 ${isHovered ? 'opacity-100' : 'opacity-80'}`} />
       </div>
-      <div className="absolute  inset-0 flex flex-col items-center justify-center text-center translate-y-[-30%] group-hover:translate-y-0 transition-all">
-        <h1 className="text-[1.8vw] font-bold text-white">{header}</h1>
-        <div className="text-[1.4vw] text-white mb-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-            <div className="border-1 px-[2vw]">
-                <p>
-                    {price} / nuitée
-                </p>
-                <p>
-                    {description}
-                </p>
-            </div>
+
+      {/* Content container */}
+      <div className="absolute bottom-0 left-0 w-full p-6 text-white z-10 transform transition-transform duration-500">
+        <h3 className="text-xl md:text-2xl font-bold mb-2">{header}</h3>
+
+        <div className={`transition-all duration-500 ease-in-out ${isHovered ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+          <div className="flex items-center justify-between mb-4">
+            <p className="text-xl font-semibold text-red-400">{price}</p>
+            <p className="text-sm text-gray-300">{description}</p>
+          </div>
+
+          <div className="flex justify-center mt-4">
+          </div>
         </div>
       </div>
     </div>
-    </div>
-    
-  ) 
-}
+  );
+};
 
-export default AnimatedCard
+export default AnimatedCard;

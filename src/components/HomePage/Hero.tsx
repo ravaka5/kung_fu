@@ -1,42 +1,71 @@
-import homeBg from '../../assets/img/Homebg.png'
-import {Link} from 'react-router-dom'
+import { useEffect, useState } from 'react';
+import { ChevronDown } from 'lucide-react';
+import homeBg from '../../assets/img/Homebg.png';
+import { Link } from 'react-router-dom';
 
 const Hero = () => {
+  const [offset, setOffset] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setOffset(window.pageYOffset);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
-    <section className='h-screen w-screen bg-bottom bg-cover flex flex-col justify-center items-center ' style={{ backgroundImage: `url(${homeBg})` }}>
-      <div className="bg-black/25"></div>
-        <div className=' text-white'>
-          <h1 className='text-center text-[4vw] text-white font-semibold font-noto-serif mt-10'>
+    <section className="relative h-screen w-full overflow-hidden">
+      <div
+        className="absolute inset-0 bg-bottom bg-cover z-0"
+        style={{
+          backgroundImage: `url(${homeBg})`,
+          transform: `translateY(${offset * 0.4}px)`
+        }}
+      />
+
+      <div className="absolute inset-0 bg-black/25 z-10" />
+
+      <div className="relative z-20 h-full w-full flex flex-col justify-center items-center text-white px-4">
+        <div className="max-w-6xl text-center">
+          <h1 className="text-4xl md:text-5xl lg:text-[4vw] font-semibold font-noto-serif mb-6">
             DECOUVREZ UN CONFORT EXCEPTIONNEL
           </h1>
-          <h2 className='text-[3vh] text-center font-poppins '>
+
+          <h2 className="text-xl md:text-2xl lg:text-[3vh] mb-12 max-w-3xl mx-auto font-poppins">
             Kung Fu Hotel Ampefy - Luxe et Saveurs Exotiques
           </h2>
 
-          <div className=' mt-12 font-poppins text-center flex flex-row justify-center gap-8 text-[3.5vh]'>
+          <div className="flex flex-col md:flex-row justify-center items-center gap-4 md:gap-8">
             <Link to="/room">
-              <button className='bg-red-600 w-[20vw] py-2 
-              cursor-pointer select-none
-              active:translate-y-2  active:[box-shadow:0_0px_0_0_#A52A2A,0_0px_0_0_#A52A2A]
-              active:border-b-[0px]
-              transition-all duration-150 [box-shadow:0_10px_0_0_#A52A2A,0_10px_0_0_#A52A2A]
-              border-[1px] border-red-500 '>
-                <span className=' h-full text-white'>Hotel</span></button>
+              <button className="px-8 py-3 bg-red-600 text-white font-poppins w-full md:w-auto
+                transform hover:bg-red-700 transition-all duration-300
+                shadow-lg hover:shadow-xl active:translate-y-1">
+                Hotel
+              </button>
             </Link>
-            
+
             <Link to="/restaurant">
-            <button className='border-3 w-[20vw] py-2
-            cursor-pointer select-none
-            active:translate-y-2  active:[box-shadow:0_0px_0_0_white,0_2px_0_0_white]
-            active:border-b-[0px]
-            transition-all duration-150 [box-shadow:0_8px_0_0_white,0_8px_0_0_white]
-             border-white'>
-              <span className='h-full'>Restaurant</span></button>
+              <button className="px-8 py-3 border-2 border-white text-white font-poppins w-full md:w-auto
+                transform hover:bg-white/10 transition-all duration-300
+                shadow-lg hover:shadow-xl active:translate-y-1">
+                Restaurant
+              </button>
             </Link>
           </div>
         </div>
-      </section>
-  )
-}
 
-export default Hero
+        <button
+          onClick={() => window.scrollTo({ top: window.innerHeight, behavior: 'smooth' })}
+          className="absolute bottom-10 animate-bounce cursor-pointer"
+          aria-label="Scroll down"
+        >
+          <ChevronDown className="h-10 w-10 text-white opacity-80" />
+        </button>
+      </div>
+    </section>
+  );
+};
+
+export default Hero;

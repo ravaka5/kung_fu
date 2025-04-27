@@ -1,52 +1,95 @@
-import img1 from "../../assets/img/room/Page2/Rectangle 41.png"
-import img2 from "../../assets/img/room/Page2/Rectangle 42.png"
-import img3 from "../../assets/img/room/Page2/Rectangle 43.png"
+import { useEffect, useRef } from 'react';
+import SectionTitle from '../SectionTitle';
 
-const Page2 = () => {
-  return (
-    <section className='h-screen w-screen flex flex-col text-center justify-center items-center gap-[2vw]'>
-        <div className="text-red-700">
-            <h1 className="text-[3vw] font-bold">
-            Equipements de Qualité
-            </h1>
-            <p className="text-[1vw] py-[1vw]">
-            Tout ce dont vous avez besoin pour un sejour agreable
-            </p>
-        </div>
-        <div className="gap-[2vw] flex ">
-            <div className="flex flex-col w-[22vw]">
-                <img src={img1}/>
-                <h1 className="text-[1.2vw] font-bold">
-                    Piscine
-                </h1>
-                <p>
-                Profitez de notre piscine pour un moment de détente et de fraîcheur.
-                Idéale pour nager ou se relaxer en toute tranquillité.
-                </p>
-            </div>
-            <div className="flex flex-col w-[22vw]">
-                <img src={img3}/>
-                <h1 className="text-[1.2vw] font-bold">
-                Salle de Jeu
-                </h1>
-                <p>
-                Amusez-vous dans notre salle de jeux, équipée pour tous les âges. 
-                Un espace idéal pour se divertir et partager de bons moments.
-                </p>
-            </div>
-            <div className="flex flex-col w-[22vw]">
-                <img src={img2}/>
-                <h1 className="text-[1.2vw] font-bold">
-                Télévision à Écran Plat
-                </h1>
-                <p>
-                Détendez-vous avec notre télévision à écran plat dans chaque chambre, 
-                offrant un large choix de chaînes nationales et internationales.
-                </p>
-            </div>
-        </div>
-    </section>
-  )
+import img1 from "../../assets/img/room/Page2/Rectangle 41.png";
+import img2 from "../../assets/img/room/Page2/Rectangle 42.png";
+import img3 from "../../assets/img/room/Page2/Rectangle 43.png";
+
+interface AmenityCardProps {
+    image: string;
+    title: string;
+    description: string;
+    delay: number;
 }
 
-export default Page2
+const AmenityCard = ({ image, title, description, delay }: AmenityCardProps) => {
+    return (
+        <div className={`animate-on-scroll opacity-0 translate-y-10 transition-all duration-700 delay-${delay} flex flex-col w-full sm:w-[280px] md:w-[22vw] group`}>
+            <div className="overflow-hidden rounded-lg mb-4">
+                <img
+                    src={image}
+                    alt={title}
+                    className="w-full h-[200px] object-cover transition-transform duration-500 group-hover:scale-110"
+                />
+            </div>
+            <h3 className="text-xl md:text-[1.2vw] font-bold text-gray-800 mb-2 group-hover:text-red-600 transition-colors">
+                {title}
+            </h3>
+            <p className="text-gray-600 group-hover:text-gray-800 transition-colors">
+                {description}
+            </p>
+        </div>
+    );
+};
+
+const Page2 = () => {
+    const sectionRef = useRef<HTMLElement>(null);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('opacity-100', 'translate-y-0');
+                        entry.target.classList.remove('opacity-0', 'translate-y-10');
+                    }
+                });
+            },
+            { threshold: 0.1 }
+        );
+
+        const elements = sectionRef.current?.querySelectorAll('.animate-on-scroll');
+        elements?.forEach(el => observer.observe(el));
+
+        return () => {
+            elements?.forEach(el => observer.unobserve(el));
+        };
+    }, []);
+
+    return (
+        <section
+            ref={sectionRef}
+            className="min-h-screen w-full py-20 px-4 flex flex-col justify-center items-center"
+        >
+            <div className="animate-on-scroll opacity-0 translate-y-10 transition-all duration-700 mb-16 text-center">
+                <SectionTitle
+                    title="Équipements de Qualité"
+                    subtitle="Tout ce dont vous avez besoin pour un séjour agréable"
+                />
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-[2vw] max-w-7xl">
+                <AmenityCard
+                    image={img1}
+                    title="Piscine"
+                    description="Profitez de notre piscine pour un moment de détente et de fraîcheur. Idéale pour nager ou se relaxer en toute tranquillité."
+                    delay={100}
+                />
+                <AmenityCard
+                    image={img3}
+                    title="Salle de Jeu"
+                    description="Amusez-vous dans notre salle de jeux, équipée pour tous les âges. Un espace idéal pour se divertir et partager de bons moments."
+                    delay={200}
+                />
+                <AmenityCard
+                    image={img2}
+                    title="Télévision à Écran Plat"
+                    description="Détendez-vous avec notre télévision à écran plat dans chaque chambre, offrant un large choix de chaînes nationales et internationales."
+                    delay={300}
+                />
+            </div>
+        </section>
+    );
+};
+
+export default Page2;

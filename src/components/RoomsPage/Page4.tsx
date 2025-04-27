@@ -1,30 +1,71 @@
-import img1 from "../../assets/img/room/Page4/img1.jpeg"
+import { useEffect, useRef } from 'react';
+import SectionTitle from '../SectionTitle';
+import img1 from "../../assets/img/room/Page4/img1.jpeg";
 
 const Page4 = () => {
-  return (
-    <section className='h-screen w-screen flex flex justify-center gap-[4vw] items-center '>
-      <div className="absolute flex bottom-[28%] w-screen h-[36vh] bg-red-500 z-[-1]"></div>
-      <div>
-            <img src={img1} alt="room" className="h-[38vw] w-[24vw] rounded-2xl object-cover object-center"></img>
-        </div>
-        <div className="flex flex-col  ">
-            <h1 className="text-[2vw] uppercase font-bold text-red-700 text-center">
-            Un room service Impeccable
-            </h1>
-            <div className="relative">
-              <p className="text-[1.4vw] my-[6vw] text-white font-semibold">
-              Profitez d'un room service <br/>
-              irréprochable, alliant rapidité et<br/>
-              élégance. Savourez des plats <br/>
-              exquis, servis avec soin dans <br/>
-              leconfort de votre chambre. <br/>
-              Un service dédié à votre satisfaction <br/>
-              et à votre confort absolu.
-              </p>
-            </div>
-        </div>
-    </section>
-  )
-}
+  const sectionRef = useRef<HTMLElement>(null);
 
-export default Page4
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('opacity-100', 'translate-y-0');
+            entry.target.classList.remove('opacity-0', 'translate-y-10');
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    const elements = sectionRef.current?.querySelectorAll('.animate-on-scroll');
+    elements?.forEach(el => observer.observe(el));
+
+    return () => {
+      elements?.forEach(el => observer.unobserve(el));
+    };
+  }, []);
+
+  return (
+    <section
+      ref={sectionRef}
+      className="relative min-h-screen w-full py-16 px-4 flex flex-col md:flex-row justify-center items-center gap-12 md:gap-[4vw] overflow-hidden"
+    >
+      {/* Red background section */}
+      <div className="absolute inset-x-0 h-[30vh] bg-red-500 z-0 transform -skew-y-2 top-[60%] md:top-[40%]" />
+
+      {/* Left column - Image */}
+      <div className="animate-on-scroll opacity-0 translate-y-10 transition-all duration-700 z-10 w-full md:w-1/2 flex justify-center">
+        <div className="relative w-full max-w-[500px]">
+          <img
+            src={img1}
+            alt="Room service"
+            className="h-[60vw] md:h-[38vw] w-full rounded-2xl object-cover object-center shadow-xl"
+          />
+          <div className="absolute inset-0 rounded-2xl bg-gradient-to-t from-black/30 to-transparent"></div>
+        </div>
+      </div>
+
+      {/* Right column - Content */}
+      <div className="animate-on-scroll opacity-0 translate-y-10 transition-all duration-700 delay-200 z-10 w-full md:w-1/2 max-w-2xl text-center md:text-left px-4">
+        <SectionTitle
+          title="Un room service impeccable"
+          light={false}
+          centered={true}
+        />
+
+        <div className="relative mt-6 mb-10">
+          <p className="text-sm sm:text-base md:text-lg lg:text-[1.2vw] text-white font-medium leading-relaxed">
+            Profitez d'un room service irréprochable, alliant rapidité et élégance. <br />
+            Savourez des plats exquis, servis avec soin dans le confort de votre chambre. <br />
+            Un service dédié à votre satisfaction et à votre confort absolu.
+          </p>
+        </div>
+
+        {/* (si tu veux un bouton tu peux le remettre ici plus tard) */}
+      </div>
+    </section>
+  );
+};
+
+export default Page4;
