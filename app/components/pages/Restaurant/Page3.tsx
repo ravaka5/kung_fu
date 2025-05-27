@@ -20,16 +20,16 @@ const Page3 = () => {
       <section className="px-4 py-12">
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10">
           <SpecialitiesCard
-            title="Le Ravitoto"
-            content="Rôti de porc aux feuilles de manioc, un véritable classique malgache."
-            price="50 000 MGA"
-            imgUrl="/assets/restaurant/bouffe/bouffe5.jpeg"
+            title="Achard chinois"
+            content="Achard chinois aux vermicelles, légumes croquants et bœuf sauté, servi avec une sauce soja – une entrée fraîche d’inspiration asiatique."
+            price="17 000 MGA"
+            imgUrl="/assets/restaurant/dishesImg/plat41.jpeg"
           />
           <SpecialitiesCard
             title="Le Hen’omby ritra"
             content="Un ragoût de bœuf malgache aux épices locales, mijoté à la perfection pour des saveurs authentiques."
-            price="80 000 MGA"
-            imgUrl="/assets/restaurant/bouffe/bouffe6.jpeg"
+            price="15 000 MGA"
+            imgUrl="/assets/restaurant/dishesImg/plat43.jpeg"
           />
         </div>
       </section>

@@ -4,15 +4,16 @@ import Card from "@/app/components/ui/Card";
 const Page4 = () => {
   return (
     <section className="w-full min-h-screen flex flex-col items-center justify-center px-4 py-16">
-      <div className="text-center font-poppins text-red-700 mb-12">
-        <p className="text-[clamp(1.1rem, 2.5vw, 1.375rem)]">Nos offres</p>
-        <h1 className="text-[clamp(2.5rem, 6vw, 4.5rem)] font-bold mb-4">Libérez le plaisir !</h1>
-        <p className="text-[clamp(1.1rem, 2.5vw, 1.375rem)] text-gray-700">
-          Des mariages aux séminaires, nous avons tout ce qu&apos;il
-          <br className="hidden sm:block" />
-          vous faut !
+      <div className="text-center font-poppins text-red-700 mb-16 px-4">
+        <p className="text-base sm:text-lg md:text-xl lg:text-2xl mb-2 sm:mb-3">Nos offres</p>
+        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4 sm:mb-6 leading-tight">
+            Libérez le plaisir !
+        </h1>
+        <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-700 max-w-2xl mx-auto leading-relaxed px-2">
+            Des mariages aux séminaires, nous avons tout ce qu&apos;il vous faut !
         </p>
-      </div>
+    </div>
+
 
       <div className="w-full max-w-7xl flex flex-col gap-10 md:flex-row md:gap-8 justify-center items-center">
         <Card

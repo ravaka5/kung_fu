@@ -1,23 +1,52 @@
 import MenuItem from "../../../../app/types/MenuItem"
 
-import img1 from "../dishesImg/bouffe1.jpeg"
-import img4 from "../dishesImg/bouffe4.jpeg"
-import img5 from "../dishesImg/bouffe5.jpeg"
-import img6 from "../dishesImg/bouffe6.jpeg"
+import img1 from "../dishesImg/plat1.jpeg"
+import img2 from "../dishesImg/plat2.jpeg"
+import img3 from "../dishesImg/plat3.jpeg"
+import img4 from "../dishesImg/plat4.jpeg"
+import img5 from "../dishesImg/plat5.jpeg"
+import img6 from "../dishesImg/plat6.jpeg"
 import img7 from "../dishesImg/plat7.jpeg"
 import img8 from "../dishesImg/plat8.jpeg"
 import img9 from "../dishesImg/plat9.jpeg"
+import img10 from "../dishesImg/plat10.jpeg"
 import img11 from "../dishesImg/plat11.jpeg"
+import img12 from "../dishesImg/plat12.jpeg"
 import img13 from "../dishesImg/plat13.jpeg"
 import img14 from "../dishesImg/plat14.jpeg"
+import img15 from "../dishesImg/plat15.jpeg"
+import img16 from "../dishesImg/plat16.jpeg"
 import img17 from "../dishesImg/plat17.jpeg"
+import img18 from "../dishesImg/plat18.jpeg"
+import img20 from "../dishesImg/plat20.jpeg"
 import img21 from "../dishesImg/plat21.jpeg"
+import img22 from "../dishesImg/plat22.jpeg"
 import img23 from "../dishesImg/plat23.jpeg"
+import img24 from "../dishesImg/plat24.jpeg"
 import img25 from "../dishesImg/plat25.jpeg"
+import img26 from "../dishesImg/plat26.jpeg"
+import img27 from "../dishesImg/plat27.jpeg"
+import img28 from "../dishesImg/plat28.jpeg"
+import img29 from "../dishesImg/plat29.jpeg"
 import img30 from "../dishesImg/plat30.jpeg"
+import img31 from "../dishesImg/plat31.jpeg"
+import img32 from "../dishesImg/plat32.jpeg"
+import img33 from "../dishesImg/plat33.jpeg"
 import img34 from "../dishesImg/plat34.jpeg"
 import img35 from "../dishesImg/plat35.jpeg"
 import img36 from "../dishesImg/plat36.jpeg"
+import img37 from "../dishesImg/plat37.jpeg"
+import img38 from "../dishesImg/plat38.jpeg"
+import img39 from "../dishesImg/plat39.jpeg"
+import img40 from "../dishesImg/plat40.jpeg"
+import img41 from "../dishesImg/plat41.jpeg"
+import img42 from "../dishesImg/plat42.jpeg"
+import img43 from "../dishesImg/plat43.jpeg"
+import img44 from "../dishesImg/plat44.jpeg"
+import img45 from "../dishesImg/plat45.jpeg"
+import img46 from "../dishesImg/plat46.jpeg"
+import img47 from "../dishesImg/plat47.jpeg"
+import img48 from "../dishesImg/plat48.jpeg";
 
 export const menuItems: MenuItem[] = [
   {
@@ -34,7 +63,7 @@ export const menuItems: MenuItem[] = [
     description: " ",
     price: "13 000 MGA",
     category: "amuse-bouche",
-    image: img6
+    image: img2
   },
   {
     id: 3,
@@ -42,7 +71,7 @@ export const menuItems: MenuItem[] = [
     description: " ",
     price: "15 000 Ar",
     category: "amuse-bouche",
-    image: img6
+    image: img3
   },
   {
     id: 4,
@@ -98,7 +127,7 @@ export const menuItems: MenuItem[] = [
     description: " ",
     price: "15 000 Ar",
     category: "chinois",
-    image: img6
+    image: img10
   },
   {
     id: 11,
@@ -114,7 +143,7 @@ export const menuItems: MenuItem[] = [
     description: " ",
     price: "20 000 Ar",
     category: "chinois",
-    image: img6
+    image: img12
   },
   {
     id: 13,
@@ -138,7 +167,7 @@ export const menuItems: MenuItem[] = [
     description: " ",
     price: "12 000 Ar",
     category: "malgache",
-    image: img6
+    image: img15
   },
   {
     id: 16,
@@ -146,7 +175,7 @@ export const menuItems: MenuItem[] = [
     description: " ",
     price: "12 000 Ar",
     category: "malgache",
-    image: img6
+    image: img16
   },
   {
     id: 17,
@@ -162,7 +191,7 @@ export const menuItems: MenuItem[] = [
     description: " ",
     price: "15 000 Ar",
     category: "chinois",
-    image: img6
+    image: img18
   },
   {
     id: 19,
@@ -178,7 +207,7 @@ export const menuItems: MenuItem[] = [
     description: " ",
     price: "20 000 Ar",
     category: "chinois",
-    image: img6
+    image: img20
   },
   {
     id: 21,
@@ -194,7 +223,7 @@ export const menuItems: MenuItem[] = [
     description: " ",
     price: "20 000 Ar",
     category: "chinois",
-    image: img6
+    image: img22
   },
   {
     id: 23,
@@ -210,7 +239,7 @@ export const menuItems: MenuItem[] = [
     description: " ",
     price: "20 000 Ar",
     category: "chinois",
-    image: img6
+    image: img24
   },
   {
     id: 25,
@@ -226,7 +255,7 @@ export const menuItems: MenuItem[] = [
     description: " ",
     price: "15 000 Ar",
     category: "malgache",
-    image: img6
+    image: img26
   },
   {
     id: 27,
@@ -234,7 +263,7 @@ export const menuItems: MenuItem[] = [
     description: " ",
     price: "15 000 Ar",
     category: "malgache",
-    image: img6
+    image: img27
   },
   {
     id: 28,
@@ -242,7 +271,7 @@ export const menuItems: MenuItem[] = [
     description: " ",
     price: "22 000 Ar",
     category: "malgache",
-    image: img6
+    image: img28
   },
   {
     id: 29,
@@ -250,7 +279,7 @@ export const menuItems: MenuItem[] = [
     description: " ",
     price: "20 000 Ar",
     category: "malgache",
-    image: img6
+    image: img29
   },
   {
     id: 30,
@@ -266,23 +295,23 @@ export const menuItems: MenuItem[] = [
     description: " ",
     price: "25 000 Ar",
     category: "chinois",
-    image: img6
+    image: img31
   },
   {
     id: 32,
-    name: "Mine Sao",
+    name: "Poisson avec Pomme frites",
     description: " ",
-    price: "25 000 Ar",
-    category: "chinois",
-    image: img6
+    price: "20 000 Ar / 250 gr",
+    category: "malgache",
+    image: img32
   },
   {
     id: 33,
-    name: "Mine Sao",
+    name: "Poisson frits",
     description: " ",
-    price: "25 000 Ar",
-    category: "chinois",
-    image: img6
+    price: "20 000 Ar/ 300 gr",
+    category: "malgache",
+    image: img33
   },
   {
     id: 34,
@@ -314,6 +343,94 @@ export const menuItems: MenuItem[] = [
     description: " ",
     price: "23 000 Ar",
     category: "malgache",
-    image: img35
+    image: img37
   },
+  {
+    id: 38,
+    name: "Shao ji fàn",
+    description: " ",
+    price: "23 000 Ar",
+    category: "chinois",
+    image: img38
+  },
+  {
+    id: 39,
+    name: "Côte sauce",
+    description: " ",
+    price: "15 000 Ar",
+    category: "malgache",
+    image: img39
+  },
+  {
+    id: 40,
+    name: "Salade de cresson",
+    description: " ",
+    price: "8 000 Ar",
+    category: "malgache",
+    image: img40
+  },
+  {
+    id: 41,
+    name: "achard chinois",
+    description: " ",
+    price: "17 000 Ar",
+    category: "chinois",
+    image: img41
+  },
+  {
+    id: 42,
+    name: "Brochettes",
+    description: " ",
+    price: "18 000 Ar",
+    category: "amuse-bouche",
+    image: img42
+  },
+  {
+    id: 43,
+    name: "Hen'omby Ritra",
+    description: " ",
+    price: "15 000 Ar",
+    category: "malgache",
+    image: img43
+  },
+  {
+    id: 44,
+    name: "Henakisoa ritra",
+    description: " avec achard de cresson",
+    price: "15 000 Ar",
+    category: "malgache",
+    image: img44
+  },
+  {
+    id: 45,
+    name: "Akoho gasy",
+    description: " ",
+    price: "20 000 Ar",
+    category: "malgache",
+    image: img45
+  },
+  {
+    id: 46,
+    name: "Henakisoa ritra",
+    description: "avec achard de tomate ",
+    price: "15 000 Ar",
+    category: "malgache",
+    image: img46
+  },
+  {
+    id: 47,
+    name: "riz cantonais végétarien",
+    description: " ",
+    price: "17 000 Ar",
+    category: "chinois",
+    image: img47
+  },
+  {
+    id: 48,
+    name: "Poisson à la vapeur",
+    description: " ",
+    price: "23 000 Ar / 200gr",
+    category: "malgache",
+    image: img48
+  }
 ]
