@@ -1,34 +1,38 @@
-import Image from 'next/image'
+import Image from "next/image";
 
 interface SpecialitiesCardProps {
-  title: string,
-  content: string,
-  imgUrl: string,
-  price: string
+  title: string;
+  content: string;
+  imgUrl: string;
+  price: string;
 }
 
-const SpecialitiesCard: React.FC<SpecialitiesCardProps> = ({ imgUrl, title, content, price }) => {
+const SpecialitiesCard: React.FC<SpecialitiesCardProps> = ({
+  imgUrl,
+  title,
+  content,
+  price,
+}) => {
   return (
-    <div>
-      <div className='rounded-3xl w-[20vw] shadow-md flex flex-col'>
-        <div className='h-full w-[fit]'>
-          <Image
-            width={400}
-            height={300}
-            src={imgUrl}
-            className='w-full h-[20vw] rounded-t-4xl object-cover'
-            alt='Speciality Image' />
-          <div className="bg-gray-200 w-fit px-[1vw] rounded-[5px]  ms-[2vw] mt-[1vw]">
-            <p>{price}</p>
-          </div>
-        </div>
-        <div className='px-[3vw] py-[2vw] w-full h-fit  rounded-b-3xl  font-poppins'>
-          <h1 className='font-semibold text-[1.4vw] mb-[1vw]'>{title}</h1>
-          <p>{content}</p>
+    <div className="w-full rounded-3xl overflow-hidden shadow-md flex flex-col bg-white">
+      <div className="relative aspect-[4/3] w-full">
+        <Image
+          fill
+          src={imgUrl}
+          alt={`Image de ${title}`}
+          className="object-cover rounded-t-3xl"
+          sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+        />
+        <div className="absolute top-3 left-3 bg-gray-200 px-3 py-1 text-sm rounded-md">
+          <p>{price}</p>
         </div>
       </div>
+      <div className="p-6">
+        <h3 className="text-xl font-semibold mb-2">{title}</h3>
+        <p className="text-gray-700 text-sm">{content}</p>
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default SpecialitiesCard
+export default SpecialitiesCard;

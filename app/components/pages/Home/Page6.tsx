@@ -1,11 +1,11 @@
-import HorizontalScroll from '@/app/components/ui/HorizontalScroll'
+import HorizontalScroll from '@/app/components/ui/HorizontalScroll';
 
 const Page6 = () => {
   return (
-    <div className='w-screen h-screen flex justify-center items-center text-center'>
-        <HorizontalScroll/>
-    </div>
-  )
-}
+    <section className="w-full min-h-screen flex justify-center items-center px-4 py-16 bg-white">
+      <HorizontalScroll />
+    </section>
+  );
+};
 
-export default Page6
+export default Page6;

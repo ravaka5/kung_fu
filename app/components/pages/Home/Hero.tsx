@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { ChevronDown } from "lucide-react";
 import Link from "next/link";
 import Image from 'next/image';
-import homeBg from "../../../../public/assets/homepage/Homebg.png"; // Adjust the path as necessary
+import homeBg from "../../../../public/assets/homepage/Homebg.png";
 
 const Hero = () => {
     const [offset, setOffset] = useState(0);
@@ -20,7 +20,6 @@ const Hero = () => {
 
     return (
         <section className="relative h-screen w-full overflow-hidden">
-            {/* Background with parallax effect */}
             <div
                 className="absolute inset-0 z-0"
                 style={{
@@ -31,7 +30,7 @@ const Hero = () => {
                     src={homeBg}
                     alt="Hotel background"
                     fill
-                    className="object-cover object-bottom"
+                    className="object-cover object-center"
                     priority
                 />
             </div>
@@ -40,27 +39,27 @@ const Hero = () => {
 
             <div className="relative z-20 h-full w-full flex flex-col justify-center items-center text-white px-4">
                 <div className="max-w-6xl text-center">
-                    <h1 className="text-4xl md:text-5xl lg:text-[4vw] font-semibold font-noto-serif mb-6">
+                    <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[4vw] font-semibold font-noto-serif mb-4 sm:mb-6 px-4">
                         DECOUVREZ UN CONFORT EXCEPTIONNEL
                     </h1>
 
-                    <h2 className="text-xl md:text-2xl lg:text-[3vh] mb-12 max-w-3xl mx-auto font-poppins">
+                    <h2 className="text-lg sm:text-xl md:text-2xl lg:text-[3vh] mb-8 sm:mb-12 max-w-3xl mx-auto font-poppins px-4">
                         Kung Fu Hotel Ampefy - Luxe et Saveurs Exotiques
                     </h2>
 
-                    <div className="flex flex-col md:flex-row justify-center items-center gap-4 md:gap-8">
-                        <Link href="/room">
-                            <button className="px-8 py-3 bg-red-600 text-white font-poppins w-full md:w-auto
-                transform hover:bg-red-700 transition-all duration-300
-                shadow-lg hover:shadow-xl active:translate-y-1">
+                    <div className="flex flex-col sm:flex-row justify-center items-center gap-4 px-4">
+                        <Link href="/room" className="w-full sm:w-auto">
+                            <button className="w-full sm:w-auto px-8 py-3 bg-red-600 text-white font-poppins
+                                transform hover:bg-red-700 transition-all duration-300
+                                shadow-lg hover:shadow-xl active:translate-y-1">
                                 Hotel
                             </button>
                         </Link>
 
-                        <Link href="/restaurant">
-                            <button className="px-8 py-3 border-2 border-white text-white font-poppins w-full md:w-auto
-                transform hover:bg-white/10 transition-all duration-300
-                shadow-lg hover:shadow-xl active:translate-y-1">
+                        <Link href="/restaurant" className="w-full sm:w-auto">
+                            <button className="w-full sm:w-auto px-8 py-3 border-2 border-white text-white font-poppins
+                                transform hover:bg-white/10 transition-all duration-300
+                                shadow-lg hover:shadow-xl active:translate-y-1">
                                 Restaurant
                             </button>
                         </Link>
@@ -72,11 +71,11 @@ const Hero = () => {
                     className="absolute bottom-10 animate-bounce cursor-pointer"
                     aria-label="Scroll down"
                 >
-                    <ChevronDown className="h-10 w-10 text-white opacity-80" />
+                    <ChevronDown className="h-8 w-8 sm:h-10 sm:w-10 text-white opacity-80" />
                 </button>
             </div>
         </section>
-    )
-}
+    );
+};
 
-export default Hero
+export default Hero;

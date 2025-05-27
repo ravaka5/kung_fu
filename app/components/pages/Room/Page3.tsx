@@ -44,14 +44,14 @@ const Page3 = () => {
         <div className="animate-on-scroll opacity-0 translate-y-10 transition-all duration-700 grid grid-cols-1 sm:grid-cols-2 gap-8 md:gap-[4vw]">
           <AnimatedCard
             header="Suite VIP"
-            price="400 000 MGA"
-            description="1 personne"
+            price="160 000 MGA"
+            description="2 personnes : Petit déjeuner inclus"
             imgUrl="/assets/room/Page3/vip.jpeg"
           />
           <AnimatedCard
             header="Chambre classique"
-            price="200 000 MGA"
-            description="1 personne"
+            price="130 000 MGA"
+            description="2 personnes : TV + Eau chaude "
             imgUrl="/assets/room/Page3/chambre.jpeg"
           />
         </div>
@@ -60,13 +60,13 @@ const Page3 = () => {
         <div className="animate-on-scroll opacity-0 translate-y-10 transition-all duration-700 delay-100 grid grid-cols-1 sm:grid-cols-2 gap-8 md:gap-[4vw]">
           <AnimatedCard
             header="Chambre familiale"
-            price="500 000 MGA"
-            description="6 personnes"
+            price="150 000 MGA"
+            description="5 personnes"
             imgUrl="/assets/room/Page3/Famille6.jpeg"
           />
           <AnimatedCard
             header="Chambre familiale"
-            price="400 000 MGA"
+            price="150 000 MGA"
             description="4 personnes"
             imgUrl="/assets/room/Page3/Famille1.jpeg"
           />
@@ -76,14 +76,14 @@ const Page3 = () => {
         <div className="animate-on-scroll opacity-0 translate-y-10 transition-all duration-700 delay-200 grid grid-cols-1 sm:grid-cols-2 gap-8 md:gap-[4vw]">
           <AnimatedCard
             header="Chambre pour couples"
-            price="300 000 MGA"
+            price="130 000 MGA"
             description="2 personnes"
             imgUrl="/assets/room/Page3/chambre2.jpeg"
           />
           <AnimatedCard
             header="Chambre familiale"
-            price="600 000 MGA"
-            description="6 personnes"
+            price="210 000 MGA"
+            description="5 personnes : lits supplémentaires"
             imgUrl="/assets/room/Page3/Famille62.jpeg"
           />
         </div>
