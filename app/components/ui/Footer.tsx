@@ -1,10 +1,20 @@
+'use client';
+
 import { Facebook, Mail, Phone, MapPin } from 'lucide-react';
+import { usePathname } from 'next/navigation';
 
 const Footer = () => {
+    const pathname = usePathname();
 
+
+    const allowedPaths = ["/", "/events/", "/room/", "/restaurant/"];
+
+    if (!allowedPaths.includes(pathname)) {
+        return null;
+    }
 
     return (
-        <footer className='w-full mt-10'>
+        <footer className='w-full'>
             {/* Top banner with availability information */}
             <div
                 className='w-full bg-center bg-cover relative py-16 md:py-24 lg:py-32'
@@ -76,7 +86,6 @@ const Footer = () => {
                             <a href="https://www.facebook.com/p/Kung-Fu-h%C3%B4tel-100063885877399/?locale=fr_FR&_rdr" className='w-10 h-10 rounded-full flex items-center justify-center bg-gray-100 hover:bg-red-700 hover:text-white transition-all'>
                                 <Facebook size={20} />
                             </a>
-
                         </div>
                     </div>
                 </div>
